@@ -10,6 +10,8 @@ public class PlayerIdleState : PlayerBaseState
         if (stateMachine.RB != null)
             stateMachine.RB.linearVelocity = Vector2.zero;
         // Play Idle Animation (Example)
+        if (stateMachine.Animator != null)
+            stateMachine.Animator.Play("Idle");
         // stateMachine.Animator.Play("IdleAnimationName");
         Debug.Log("Entering Idle State");
     }

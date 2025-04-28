@@ -19,6 +19,8 @@ public class ShootState : PlayerBaseState
         // Logic during the shoot state (e.g., handle firing cooldown, check ammo)
 
         // Check for transitions out of the shoot state
+        if (stateMachine.Animator != null)
+            stateMachine.Animator.Play("");
         // Check for transitions out of the shoot state
         CheckSwitchStates(); // We'll keep this helper method for clarity
     }
